@@ -128,7 +128,7 @@ const BookTable = () => {
       Header: 'Actions',
       accessor: 'id',
       Cell: ({ row }) => (
-        <button onClick={() => handleEdit(row.original)}>Edit</button>
+        <button className='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"' onClick={() => handleEdit(row.original)}>Edit</button>
       )
     }
   ], []);
@@ -198,6 +198,7 @@ const BookTable = () => {
       <div>
         <input
           type="text"
+          className="items-center w-80 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Search by author..."
           value={searchAuthor}
           onChange={e => setSearchAuthor(e.target.value)}
@@ -205,72 +206,81 @@ const BookTable = () => {
       </div>
       {isEditing && (
         <div className="modal">
-          <h2>Edit Book</h2>
-          <label>
+          <h2 className='text-xl p-2'>Edit Book Form</h2>
+          <label className='p-2'>
             Title:
             <input
+              className="items-center w-50 p-4 ps-10 h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               type="text"
               name="title"
               value={editingBook.title}
               onChange={handleChange}
             />
           </label>
-          <label>
+          <label className='p-2'>
             Author Name:
             <input
               type="text"
+              className="items-center w-50 p-4 ps-10 h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               name="author_name"
               value={editingBook.author_name}
               onChange={handleChange}
             />
           </label>
-          <label>
+          <label className='p-2'>
             First Publish Year:
             <input
               type="text"
+              className="items-center w-50 p-4 ps-10 h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               name="first_publish_year"
               value={editingBook.first_publish_year}
               onChange={handleChange}
             />
           </label>
-          <label>
+          <label className='p-2'>
             Subject:
             <input
               type="text"
+              className="items-center w-50 p-4 ps-10 h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               name="subject"
               value={editingBook.subject}
               onChange={handleChange}
             />
           </label>
-          <label>
+          <label className='p-2'>
             Ratings Average:
             <input
               type="text"
+              className="items-center w-50 p-4 ps-10 h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               name="ratings_average"
               value={editingBook.ratings_average}
               onChange={handleChange}
             />
           </label>
-          <label>
+          <label className='p-2'>
             Author Birth Date:
             <input
               type="text"
+              className="items-center w-50 p-4 ps-10 h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               name="author_birth_date"
               value={editingBook.author_birth_date}
               onChange={handleChange}
             />
           </label>
-          <label>
+          <label className='p-2'>
             Author Top Work:
             <input
               type="text"
+              className="items-center w-50 p-4 ps-10 h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               name="author_top_work"
               value={editingBook.author_top_work}
               onChange={handleChange}
             />
           </label>
-          <button onClick={handleSave}>Save</button>
-          <button onClick={() => setIsEditing(false)}>Cancel</button>
+          <div className='p-2'>
+          <button className='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700' onClick={handleSave}>Save</button>
+          <button className='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700' onClick={() => setIsEditing(false)}>Cancel</button>
+          </div>       
         </div>
       )}
       <table {...getTableProps()} style={{ width: '100%', border: '1px solid black' }}>
@@ -305,17 +315,17 @@ const BookTable = () => {
           })}
         </tbody>
       </table>
-      <div>
-        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+      <div className='p-4'>
+        <button className='px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white' onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
           {'<<'}
         </button>{' '}
-        <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+        <button className='px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white' onClick={() => previousPage()} disabled={!canPreviousPage}>
           {'<'}
         </button>{' '}
-        <button onClick={() => nextPage()} disabled={!canNextPage}>
+        <button className='px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white' onClick={() => nextPage()} disabled={!canNextPage}>
           {'>'}
         </button>{' '}
-        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
+        <button className='px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white' onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
           {'>>'}
         </button>{' '}
         <span>
@@ -325,6 +335,7 @@ const BookTable = () => {
           </strong>{' '}
         </span>
         <select
+          className='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'
           value={tablePageSize}
           onChange={e => {
             setLocalPageSize(Number(e.target.value));
@@ -337,8 +348,8 @@ const BookTable = () => {
           ))}
         </select>
       </div>
-      <div>
-        <CSVLink data={csvData} filename="book_data.csv">
+      <div className=''>
+        <CSVLink className='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700' data={csvData} filename="book_data.csv">
           Download CSV
         </CSVLink>
       </div>

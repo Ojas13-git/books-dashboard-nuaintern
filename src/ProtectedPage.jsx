@@ -8,7 +8,7 @@ const ProtectedPage = () => {
   return (
     <div className='App'>
         <UserButton/>
-        <h1>Open Library Dashboard</h1>
+        <h1 className='p-2 text-3xl font-medium'>Open Library Dashboard</h1>
       <main>
         <BookTable />
       </main>

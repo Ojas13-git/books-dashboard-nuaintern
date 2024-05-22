@@ -9,7 +9,7 @@ import ProtectedPage from './ProtectedPage';
 // Import your publishable key
 const PUBLISHABLE_KEY = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY
 
-console.log(PUBLISHABLE_KEY);
+// console.log(PUBLISHABLE_KEY);
 if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key")
 }
@@ -27,11 +27,11 @@ const ClerkWithRoutes=()=>{
         <Route path="/" element={<App/>}/>
         <Route
           path="/sign-in/*"
-          element={<SignIn redirectUrl={'/protected'} routing="path" path="/sign-in"/>}
+          element={<SignIn fallbackRedirectUrl={'/protected'} routing="path" path="/sign-in"/>}
         />
         <Route
           path="/sign-up/*"
-          element={<SignUp redirectUrl={'/protected'} routing="path" path="/sign-up"/>}
+          element={<SignUp fallbackRedirectUrl={'/protected'} routing="path" path="/sign-up"/>}
         />
         <Route
           path="/protected"
