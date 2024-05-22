@@ -88,7 +88,7 @@ const BookTable = () => {
             subject : bookSubjects[index],
             author_birth_date : bookAuthorsBirthDates[index] ? bookAuthorsBirthDates[index] : 'NA',
             ratings_average : bookRatings[index] ? Math.round(bookRatings[index] * 100) / 100:  'NA',
-            author_top_work: 'N/A' 
+            author_top_work: book.work.title? book.work.title:'N/A' 
           })
         })
 
