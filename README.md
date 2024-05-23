@@ -1,6 +1,19 @@
+## Open Library Books Dashboard build using React.js
+
+### Description
+
+- columns present: ratings_average, author name, title, first_publish_year, subject, author_birth_date, author_top_work
+- Pagination Support : by default showing 10 books per page, and can change up to 50, 100 records per page
+- asc/ desc sort on all the columns
+- Support editing of a row entry
+- Search books feature by author
+- Download the current results in a CSV
+- Clerk auth for logging into this dashboard
+- Host this dashboard online
+
 ![image](https://github.com/Ojas13-git/books-dashboard-nuaintern/assets/79032848/20d7e12a-e58d-4655-a106-1ab4a5e491ea)
-![image](https://github.com/Ojas13-git/books-dashboard-nuaintern/assets/79032848/21bc24a9-3528-4c1b-9f86-77f17bc9dddd)
-![image](https://github.com/Ojas13-git/books-dashboard-nuaintern/assets/79032848/7364eb04-5cea-4de8-9a54-d085064b7daf)
-![image](https://github.com/Ojas13-git/books-dashboard-nuaintern/assets/79032848/a09732f8-314e-4517-bdad-43f143ff7ae4)
-![image](https://github.com/Ojas13-git/books-dashboard-nuaintern/assets/79032848/55cd048d-b0e5-4daa-836e-acbfc7a7e652)
-![image](https://github.com/Ojas13-git/books-dashboard-nuaintern/assets/79032848/ab73c8f3-d78d-4a90-b702-d9111615fb3b)
+![image](https://github.com/Ojas13-git/books-dashboard-nuaintern/assets/79032848/8bbf178e-d2cc-474e-86fd-0d65bc6e7c58)
+![image](https://github.com/Ojas13-git/books-dashboard-nuaintern/assets/79032848/9d15cc32-9ed3-4526-b678-d44766106491)
+![image](https://github.com/Ojas13-git/books-dashboard-nuaintern/assets/79032848/6564051e-9b32-4ec4-91ff-017671a4f54a)
+![image](https://github.com/Ojas13-git/books-dashboard-nuaintern/assets/79032848/20c25077-9697-4186-b823-536381208c75)
+
