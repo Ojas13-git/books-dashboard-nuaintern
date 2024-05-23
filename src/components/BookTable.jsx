@@ -251,7 +251,7 @@ const BookTable = () => {
           </div>
           {isEditing && (
             <div className="modal">
-              <h2 className="text-xl p-2">Edit Book Form</h2>
+              <h2 className="text-xl p-4">Edit Book Form</h2>
               <label className="p-2">
                 Title:
                 <input
@@ -262,7 +262,7 @@ const BookTable = () => {
                   onChange={handleChange}
                 />
               </label>
-              <label className="p-2">
+              <label className="pl-4">
                 Author Name:
                 <input
                   type="text"
@@ -272,7 +272,7 @@ const BookTable = () => {
                   onChange={handleChange}
                 />
               </label>
-              <label className="p-2">
+              <label className="pl-4">
                 First Publish Year:
                 <input
                   type="text"
@@ -292,7 +292,7 @@ const BookTable = () => {
                   onChange={handleChange}
                 />
               </label>
-              <label className="p-2">
+              <label className="pl-4">
                 Ratings Average:
                 <input
                   type="text"
@@ -302,7 +302,7 @@ const BookTable = () => {
                   onChange={handleChange}
                 />
               </label>
-              <label className="p-2">
+              <label className="pl-2">
                 Author Birth Date:
                 <input
                   type="text"
@@ -338,6 +338,7 @@ const BookTable = () => {
               </div>
             </div>
           )}
+          <h2 className="text-md p-2">Click on the column name to apply asc/desc sort</h2>
           <table
             {...getTableProps()}
             style={{ width: "100%", border: "1px solid black" }}
